@@ -48,5 +48,5 @@ jobs:
           docker pull kamartinez/get-name
 
           # Ejecute
-          docker run -d --name get-description -p 5003:5003 kamartinez/get-description
-          docker run -d --name get-name -p 5002:5002 kamartinez/get-name
+          docker run -d --name get-description -p 5003:5003 --restart unless-stopped kamartinez/get-description
+          docker run -d --name get-name -p 5002:5002 --restart unless-stopped kamartinez/get-name
